@@ -1,0 +1,52 @@
+/docs is the authoritative system specification source.
+
+---
+
+## Core Behavior
+
+- Preserve overall system intent over literal doc adherence.
+- Follow BUILD_ORDER unless dependencies require deviation.
+- Endpoints, schemas, streams, contracts, and invariants are authoritative unless clearly broken.
+- If docs conflict, resolve using best engineering judgment while preserving architecture coherence.
+- Minor drift is acceptable if it improves feasibility, consistency, maintainability, or integration quality.
+- Use reasoning to bridge stale plans, gaps, inconsistencies, evolving ML requirements, or missing implementation details.
+- Prefer stable, deterministic implementations over unnecessary abstractions.
+
+---
+
+## Implementation Rules
+
+- Reuse existing patterns before creating new ones.
+- Avoid duplicate business logic.
+- Preserve API stability whenever possible.
+- Keep modules isolated and composable.
+- Avoid premature abstractions.
+- Keep comments minimal and high-value only.
+- Never silently remove major functionality.
+- Never arbitrarily rewrite architecture or contracts.
+- Flag critical contradictions before proceeding.
+
+---
+
+## Operational Workflow
+
+Before implementation:
+1. Read only relevant docs/files
+2. Infer dependencies
+3. Plan minimally
+4. Implement incrementally
+5. Verify architectural consistency
+
+Avoid:
+- full repo rereads,
+- repeated context ingestion,
+- redundant explanations,
+- unnecessary file scans,
+- verbose chain-of-thought style output.
+
+Optimize for:
+- architectural coherence,
+- implementation stability,
+- token efficiency,
+- maintainability,
+- end-to-end system consistency.
